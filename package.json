@@ -1,6 +1,6 @@
 {
   "name": "js-media-queries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Media queries in JS",
   "main": "dist/index.js",
   "module": "./src/index.js",

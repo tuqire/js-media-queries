@@ -47,7 +47,5 @@ function setMediaQuery(mediaQueriesStore) {
 		.sort((mediaQuery1, mediaQuery2) => mediaQueriesStore[mediaQuery1] > mediaQueriesStore[mediaQuery2] ? -1 : 1)
 		.find(mediaQuery => window.matchMedia(`(min-width: ${mediaQueriesStore[mediaQuery]}px)`).matches);
 
-		console.log('computing...', mediaQuery);
-
 	return mediaQuery;
 }

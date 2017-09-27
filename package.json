@@ -1,0 +1,30 @@
+{
+  "name": "js-media-queries",
+  "version": "1.0.0",
+  "description": "Media queries in JS",
+  "main": "dist/index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "clean": "rm -rf dist/ && rm -rf package-lock.json",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuqire/js-media-queries.git"
+  },
+  "keywords": [
+    "JS media queries"
+  ],
+  "author": "Tuqire hussain <me@tuqire.com> (http://www.tuqire.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuqire/js-media-queries/issues"
+  },
+  "homepage": "https://github.com/tuqire/js-media-queries#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.18.2",
+    "babel-preset-env": "^1.6.0"
+  }
+}

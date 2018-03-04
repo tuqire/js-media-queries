@@ -45,6 +45,9 @@ console.log(`You are currently on a ${screenSize[breakPoint]}`);
 
 ```
 
+## Todo
+
+1. Add unit tests
 
 ## Contributors
 

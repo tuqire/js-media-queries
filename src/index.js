@@ -1,8 +1,8 @@
 export default function setMediaQueries(mediaQueries) {
 	const mediaQueriesStore = validateMediaQueries(mediaQueries);
-	let cachedMediaQuery = setMediaQuery(mediaQueriesStore);
+	let cachedMediaQuery = setBreakpoint(mediaQueriesStore);
 
-	window.addEventListener('resize', () => cachedMediaQuery = setMediaQuery(mediaQueriesStore));
+	window.addEventListener('resize', () => cachedMediaQuery = setBreakpoint(mediaQueriesStore));
 	return () => cachedMediaQuery;
 }
 
@@ -42,7 +42,7 @@ function validateMediaQueries(mediaQueries) {
 	return errors ? defaultMediaQueries : mediaQueries;
 }
 
-function setMediaQuery(mediaQueriesStore) {
+function setBreakpoint(mediaQueriesStore) {
 	const mediaQuery = Object.keys(mediaQueriesStore)
 		.sort((mediaQuery1, mediaQuery2) => mediaQueriesStore[mediaQuery1] > mediaQueriesStore[mediaQuery2] ? -1 : 1)
 		.find(mediaQuery => window.matchMedia(`(min-width: ${mediaQueriesStore[mediaQuery]}px)`).matches);

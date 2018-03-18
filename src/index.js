@@ -1,14 +1,3 @@
-export default function setMediaQueries (mediaQueries) {
-  const mediaQueriesStore = validateMediaQueries(mediaQueries)
-  let cachedMediaQuery = setBreakpoint(mediaQueriesStore)
-
-  window.addEventListener('resize', () => {
-    cachedMediaQuery = setBreakpoint(mediaQueriesStore)
-  })
-
-  return () => cachedMediaQuery
-}
-
 function validateMediaQueries (mediaQueries) {
   let zeroMediaQueryFound = false
   const defaultMediaQueries = {
@@ -52,3 +41,16 @@ function setBreakpoint (mediaQueriesStore) {
 
   return mediaQuery
 }
+
+const setMediaQueries = mediaQueries => {
+  const mediaQueriesStore = validateMediaQueries(mediaQueries)
+  let cachedMediaQuery = setBreakpoint(mediaQueriesStore)
+
+  window.addEventListener('resize', () => {
+    cachedMediaQuery = setBreakpoint(mediaQueriesStore)
+  })
+
+  return () => cachedMediaQuery
+}
+
+export default setMediaQueries

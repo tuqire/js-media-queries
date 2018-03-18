@@ -1,6 +1,6 @@
 {
   "name": "js-media-queries",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Media queries in JS",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -38,7 +38,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-babel": "^4.1.1",
